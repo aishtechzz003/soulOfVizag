@@ -1,0 +1,422 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: black;
+    color: white;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('beach.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.4),
+        #000000
+    );
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links li a {
+    display: inline-block;
+
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #47B5FF;
+    transform: translateY(-6px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+}
+
+.content {
+    max-width: 650px;
+    animation: fadeRight 0.8s ease forwards;
+}
+
+.small-text {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    color: #F2731D;
+
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.main-heading {
+    font-size: 120px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+}
+
+.main-heading span {
+    color: #F2731D;
+}
+
+.description {
+    font-size: 30px;
+    line-height: 1.8;
+
+    color: #dddddd;
+
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   EXPLORE SECTION
+========================================= */
+
+.explore {
+    padding: 40px 8%;
+    background: #041C32;
+    position: relative;
+    min-height: 100vh;
+}
+
+.map {
+    width: 50%;
+
+    margin: 2px 3px;
+    padding: 2px 3px;
+}
+
+.map img {
+    width: 75%;
+    height: 100%;
+
+    border-radius: 50%;
+}
+
+.explore-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+     padding: 0 9%;
+
+}
+
+.side-para {
+    text-align: left;
+
+    margin: 2px 3px;
+    padding: 2px 3px;
+}
+
+.vizag-highlights {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 100%;
+    padding: 20px;
+}
+
+.highlight {
+    width: 260px;
+    padding: 18px 24px;
+
+    border: 2px solid #fd6304;
+    border-radius: 50px;
+
+    background: rgba(255, 215, 0, 0.05);
+    backdrop-filter: blur(10px);
+
+    color: #fff;
+
+    transition: 0.3s;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 25px rgba(241, 76, 5, 0.5);
+}
+
+.highlight span {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.highlight h3 {
+    display: inline;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+/* =========================================
+   FEATURES SECTION
+========================================= */
+
+.features {
+    width: 90%;
+
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+         padding: 0 9%;
+
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.glass-img {
+    width: 350px;
+    height: 220px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 170, 0, 0.15);
+}
+
+.glass-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    color: white;
+}
+
+.content h3 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+
+    color: #ffb300;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: #d0d0d0;
+}
+
+/* =========================================
+   FOOD SECTION
+========================================= */
+
+.food-section {
+    padding: 100px 8%;
+    background: #000;
+
+    margin-top: 50px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 10px 10%;
+
+    border-radius: 50px;
+
+    background: rgba(255, 140, 0, 0.08);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+
+    color: #ff8c00;
+
+    font-size: 40px;
+    letter-spacing: 1px;
+
+    alignment-baseline: center;
+}
+
+.section-heading h2 {
+    font-size: 4rem;
+
+    color: white;
+
+    margin: 20px 0;
+}
+
+.section-heading p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #bdbdbd;
+    line-height: 1.8;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+.food-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 140, 0, 0.15);
+
+    transition: 0.4s ease;
+
+    width: 350px;
+    height: 300px;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 40px rgba(255, 140, 0, 0.2);
+}
+
+.food-card img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+.food-card:hover img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 2.5rem;
+    }
+}
